@@ -93,6 +93,7 @@ function ProductsTableHead({order, orderBy, onRequestSort}) {
                         sortDirection={orderBy === headCell.id ? order : false}
                     >
                         <TableSortLabel
+                            data-testid={'sort-by-' + headCell.id}
                             active={orderBy === headCell.id}
                             direction={orderBy === headCell.id ? order : 'asc'}
                             onClick={createSortHandler(headCell.id)}
